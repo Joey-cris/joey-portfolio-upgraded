@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Joey C. Galolo | Web Developer &amp; Photojournalist</title>
+  <meta name="description" content="Portfolio of Joey C. Galolo — BSIT graduate, web developer (PHP, React, Java, Spring Boot) and photojournalist from Southern Leyte, Philippines." />
+  <meta name="author" content="Joey C. Galolo" />
+  <meta name="theme-color" content="#07090d" />
+  <!-- Open Graph / sharing. TODO: after deploying, change og:image and og:url to full https:// addresses -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Joey C. Galolo | Web Developer &amp; Photojournalist" />
+  <meta property="og:description" content="BSIT graduate building web systems and telling stories through photography. Open to opportunities." />
+  <meta property="og:image" content="og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307090d'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='%23e9c98a'%3EJG%3C/text%3E%3C/svg%3E" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Joey C. Galolo","jobTitle":"Web Developer & Photojournalist","email":"mailto:joeygalolo07@gmail.com","alumniOf":"Southern Leyte State University","address":{"@type":"PostalAddress","addressRegion":"Southern Leyte","addressCountry":"PH"}}
+  </script>
+  <script>
+    /* Intro safety: if intro.js fails to load, never leave the page covered */
+    (function () {
+      var r = document.documentElement;
+      r.classList.add("intro-on");
+      setTimeout(function () {
+        if (!r.classList.contains("intro-ready")) { r.classList.remove("intro-on"); r.classList.add("no-intro"); }
+      }, 3000);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" href="src/intro.css" />
+  <link rel="stylesheet" href="src/upgrades.css" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<noscript><style>.intro{display:none!important}.rv{opacity:1!important;transform:none!important}</style></noscript>
+
+<!-- INTRO -->
+<div class="intro" id="intro" role="dialog" aria-label="Welcome">
+  <div class="in-grain"></div>
+  <button class="in-skip" id="inSkip">Skip</button>
+  <button class="in-mute" id="inMute" aria-label="Mute sound">♪</button>
+
+  <div class="in-gate" id="inGate">
+    <div class="in-logo">JG</div>
+    <div class="in-btns"><button class="in-start" id="inStart">Enter with sound</button><button class="in-start quiet" id="inQuiet">Enter silently</button></div>
+  </div>
+
+  <div class="in-stage" id="inStage" hidden>
+    <svg class="in-art" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="g" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stop-color="#8fb0ff"/><stop offset="1" stop-color="#e9c98a"/>
+        </linearGradient>
+        <radialGradient id="glowB" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#6e8cff" stop-opacity=".30"/>
+          <stop offset="60%" stop-color="#6e8cff" stop-opacity=".06"/>
+          <stop offset="100%" stop-color="#6e8cff" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="glowG" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#e9c98a" stop-opacity=".18"/>
+          <stop offset="100%" stop-color="#e9c98a" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="vig" cx="50%" cy="50%" r="75%">
+          <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#000" stop-opacity=".65"/>
+        </radialGradient>
+        <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1.2" fill="#fff" fill-opacity=".07"/>
+        </pattern>
+        <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="14"/></filter>
+      </defs>
+
+      <rect width="1920" height="1080" fill="#07090d"/>
+      <rect class="a-fade" width="1920" height="1080" fill="url(#dots)"/>
+      <ellipse class="a-fade" cx="760" cy="470" rx="760" ry="620" fill="url(#glowB)"/>
+      <ellipse class="a-fade late" cx="1200" cy="640" rx="620" ry="460" fill="url(#glowG)"/>
+
+      <g stroke="url(#g)" stroke-width="1.2">
+        <circle class="dr d1" pathLength="1" cx="960" cy="430" r="190" stroke-opacity=".22"/>
+        <circle class="dr d1 s" pathLength="1" cx="960" cy="430" r="370" stroke-opacity=".12"/>
+        <circle class="dr d1 ss" pathLength="1" cx="960" cy="430" r="500" stroke-opacity=".07"/>
+        <circle class="ring-dots" cx="960" cy="430" r="270" fill="none" stroke-opacity=".22" stroke-dasharray="3 9"/>
+      </g>
+
+      <g transform="translate(960 430)" stroke="url(#g)" stroke-linejoin="round">
+        <polygon class="dr d2" pathLength="1" points="0,-165 143,-82 143,82 0,165 -143,82 -143,-82" stroke-opacity=".5" stroke-width="1.6"/>
+        <polygon class="dr d2 s" pathLength="1" points="0,-130 113,-65 113,65 0,130 -113,65 -113,-65" stroke-opacity=".2" stroke-width="1"/>
+      </g>
+
+      <g stroke="url(#g)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline class="dr d2" pathLength="1" points="520,370 460,430 520,490" stroke-opacity=".55"/>
+        <polyline class="dr d2 s" pathLength="1" points="1400,370 1460,430 1400,490" stroke-opacity=".55"/>
+      </g>
+
+      <g stroke="#fff" stroke-opacity=".35" stroke-width="2.5" stroke-linecap="square">
+        <path class="dr d1" pathLength="1" d="M110 190 V110 H190"/>
+        <path class="dr d1" pathLength="1" d="M1730 110 H1810 V190"/>
+        <path class="dr d1" pathLength="1" d="M110 890 V970 H190"/>
+        <path class="dr d1" pathLength="1" d="M1730 970 H1810 V890"/>
+      </g>
+      <g class="rec" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="3" fill="#fff" fill-opacity=".4">
+        <circle class="recdot" cx="128" cy="140" r="5" fill="#ff5d5d"/>
+        <text x="146" y="146">REC</text>
+        <text x="1792" y="146" text-anchor="end">BSIT · 2026</text>
+      </g>
+
+      <g transform="translate(960 430)" text-anchor="middle" font-family="'Instrument Serif','Playfair Display',Georgia,serif" font-style="italic" font-size="170">
+        <text class="mono-g" y="52" fill="#e9c98a" filter="url(#soft)">JG</text>
+        <text class="mono-t" y="52">JG</text>
+        <text class="mono-f" y="52">JG</text>
+      </g>
+
+      <rect width="1920" height="1080" fill="url(#vig)"/>
+    </svg>
+
+    <div class="in-text">
+      <p class="in-welcome" id="inWelcome" aria-label="Welcome to my portfolio"></p>
+      <div class="in-rule"></div>
+      <h2 class="in-name" id="inName" aria-label="Joey Galolo"></h2>
+      <p class="in-sub">BSIT Graduate · Web Developer · Photojournalist</p>
+    </div>
+    <div class="in-bar"><i></i></div>
+  </div>
+
+  <div class="in-door l"></div><div class="in-door r"></div>
+</div>
+
+<!-- ANIMATED BACKGROUND -->
+<div class="bg" id="bg" aria-hidden="true">
+  <div class="bl b1"><i></i></div>
+  <div class="bl b2"><i></i></div>
+  <div class="bl b3"><i></i></div>
+  <div class="rg"><svg viewBox="0 0 800 800" fill="none" stroke="currentColor"><circle cx="400" cy="400" r="150"/><circle cx="400" cy="400" r="235" stroke-dasharray="3 10"/><circle cx="400" cy="400" r="320"/><circle cx="400" cy="400" r="395" stroke-dasharray="1 14"/><circle cx="400" cy="250" r="5" fill="currentColor"/><circle cx="635" cy="400" r="4" fill="currentColor"/><circle cx="400" cy="720" r="5" fill="currentColor"/></svg></div>
+  <div class="gr"></div>
+</div>
+
+<div class="prog" id="prog"></div>
+<div class="pf">
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="side"><i data-icon="menu" data-size="20"></i></button>
+
+  <aside class="side" id="side">
+    <a class="logo" href="#home" aria-label="Joey Galolo — home">JG<i></i></a>
+    <nav id="nav" aria-label="Sections">
+      <a href="#home" data-id="home"><i data-icon="home" data-size="17"></i>Home</a>
+      <a href="#about" data-id="about"><i data-icon="user" data-size="17"></i>About</a>
+      <a href="#services" data-id="services"><i data-icon="layers" data-size="17"></i>What I Do</a>
+      <a href="#skills" data-id="skills"><i data-icon="wrench" data-size="17"></i>Skills</a>
+      <a href="#projects" data-id="projects"><i data-icon="code" data-size="17"></i>Projects</a>
+      <a href="#experience" data-id="experience"><i data-icon="briefcase" data-size="17"></i>Experience</a>
+      <a href="#education" data-id="education"><i data-icon="graduation" data-size="17"></i>Education</a>
+      <a href="#certificates" data-id="certificates"><i data-icon="award" data-size="17"></i>Certificates</a>
+      <a href="#photojournalism" data-id="photojournalism"><i data-icon="camera" data-size="17"></i>Photojournalism</a>
+      <a href="#work" data-id="work"><i data-icon="image" data-size="17"></i>My Work</a>
+      <a href="#testimonials" data-id="testimonials"><i data-icon="quote" data-size="17"></i>Testimonials</a>
+      <a href="#hobbies" data-id="hobbies"><i data-icon="heart" data-size="17"></i>Hobbies</a>
+      <a href="#contact" data-id="contact"><i data-icon="mail" data-size="17"></i>Contact</a>
+    </nav>
+    <div class="sbot">
+      <p>Let's build something great together.</p>
+      <div class="soc">
+        <a data-bind="github" target="_blank" rel="noreferrer" aria-label="GitHub"><i data-icon="github" data-size="16"></i></a>
+        <a data-bind="linkedin" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i data-icon="linkedin" data-size="16"></i></a>
+        <a data-bind="mailto" aria-label="Email"><i data-icon="mail" data-size="16"></i></a>
+        <button id="theme" aria-label="Toggle dark mode"></button>
+      </div>
+      <a class="btn full" data-bind="cv" target="_blank" rel="noreferrer">View CV <i data-icon="arrowUpRight" data-size="15"></i></a>
+    </div>
+  </aside>
+
+  <main id="main" tabindex="-1">
+    <!-- HERO -->
+    <section id="home" class="hero dots">
+      <div class="hero-l">
+        <span class="pill"><b></b>Open to opportunities</span>
+        <h1 id="heroName"></h1>
+        <p class="role"><span id="typed">BSIT Graduate · Web Developer · Photojournalist</span><i class="caret"></i></p>
+        <p class="why" id="whyHire" hidden></p>
+        <p class="lead">I enjoy turning ideas into functional systems and capturing meaningful moments through photography and multimedia. I am passionate about technology, visual storytelling, web development, and continuously developing my skills in photography and content creation.</p>
+        <div class="row">
+          <a class="btn" href="#projects">Explore My Work <i data-icon="arrowRight" data-size="16"></i></a>
+          <a class="btn ghost" data-bind="cv" download><i data-icon="download" data-size="16"></i>Download CV</a>
+        </div>
+        <dl class="facts" id="facts"></dl>
+        <div class="stats" id="stats"></div>
+      </div>
+      <div class="hero-r">
+        <div id="heroPortrait"></div>
+        <div class="float f1"><i data-icon="graduation" data-size="18"></i><div><b>BSIT · SLSU</b><span>Tomas Oppus, 2026</span></div></div>
+        <div class="float f2"><i data-icon="camera" data-size="18"></i><div><b>Photojournalist</b><span>School Publication</span></div></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div id="marquee"></div></div>
+
+    <section id="about">
+      <div class="head rv"><div><h2>About Me</h2></div></div>
+      <div class="g2">
+        <div class="copy rv">
+          <p class="big">I'm a Bachelor of Science in Information Technology graduate from Southern Leyte State University with experience in web development, multimedia, photography, documentation, and technical work.</p>
+          <p>I have two years of experience as a Photojournalist in our school publication during my college years, where I was involved in covering school activities, events, and capturing photographs for publication. This experience helped me develop my skills in photography, visual storytelling, attention to detail, creativity, and working under deadlines.</p>
+          <p>My experience in photojournalism also taught me how to capture important moments, choose appropriate compositions, and work with other members of a publication team. I am interested in further developing my skills in photography and multimedia content creation.</p>
+        </div>
+        <div class="rv" style="transition-delay:120ms">
+          <div class="card prof">
+            <div id="aboutPic"></div>
+            <div class="cb">
+              <h3 id="aboutName"></h3><span class="tag">BSIT Graduate</span>
+              <dl>
+                <dt>Location</dt><dd id="aboutLoc"></dd>
+                <dt>School</dt><dd>Southern Leyte State University</dd>
+                <dt>Degree</dt><dd>BS Information Technology</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="alt">
+      <div class="head rv"><div><h2>What I Do</h2><p class="lead">Areas I've worked in through internships, projects and publication work.</p></div></div>
+      <div class="svgrid" id="svgrid"></div>
+    </section>
+
+    <section id="skills">
+      <div class="head rv"><div><h2>Skills</h2><p class="lead">Technical depth, creative eye, and the habits that keep projects moving.</p></div></div>
+      <div class="skgrid" id="skgrid"></div>
+    </section>
+
+    <section id="projects" class="alt">
+      <div class="head rv">
+        <div><h2>Featured Projects</h2><p class="lead">Systems I've designed and built. Open one for the details.</p></div>
+        <a class="link" data-bind="github" target="_blank" rel="noreferrer">View All <i data-icon="arrowRight" data-size="15"></i></a>
+      </div>
+      <div class="pgrid" id="pgrid"></div>
+    </section>
+
+    <section id="experience">
+      <div class="head rv"><div><h2>Experience</h2></div></div>
+      <div class="tl">
+        <div class="rv"><div class="job">
+          <span class="eyebrow">JAN 15, 2026 – APR 3, 2026</span>
+          <h3>Web Developer Intern</h3><p class="org">ARMADA LOGICS INC.</p>
+          <ul>
+            <li>Developed <b>responsive websites</b> using HTML, CSS, JavaScript, PHP, and React.js.</li>
+            <li>Worked with the team on web development tasks.</li>
+            <li>Developed backend applications and REST APIs using <b>Java and Spring Boot</b>.</li>
+            <li>Tested web pages and fixed minor issues.</li>
+            <li>Assisted in organizing and updating website files and content.</li>
+            <li>Gained hands-on experience in <b>Android Studio</b> for mobile application development.</li>
+          </ul>
+          <div class="mini" id="internGrid"></div>
+        </div></div>
+        <div class="rv"><div class="job">
+          <span class="eyebrow">JUN 15, 2026 – JUL 22, 2026</span>
+          <h3>Department of Agriculture</h3><p class="org">LGU-MALITBOG · Administrative Support / Clerical Role</p>
+          <ul>
+            <li>Administrative Support / Clerical Role.</li>
+            <li>Technical / Agricultural Field Assistant.</li>
+            <li>Administrative Aide / Data Encoder.</li>
+          </ul>
+          <div class="mini" id="agriGrid"></div>
+        </div></div>
+      </div>
+    </section>
+
+    <section id="education" class="alt">
+      <div class="head rv"><div><h2>Education</h2></div></div>
+      <div class="edu rv" id="eduWrap"></div>
+    </section>
+
+    <section id="certificates">
+      <div class="head rv"><div><h2>Certificates &amp; Training</h2><p class="lead">Click a certificate to view it full-size.</p></div></div>
+      <div class="cgrid" id="cgrid"></div>
+    </section>
+
+    <section id="photojournalism" class="alt">
+      <div class="head rv"><div><h2>Photojournalism</h2><p class="lead">2 Years of Experience — School Publication</p></div></div>
+      <div class="rv" id="photoCtx"></div>
+      <div class="rv"><div class="chips" id="photoChips" style="margin-bottom:32px"></div></div>
+      <div id="photoFeat"></div>
+      <div class="masonry" id="photoGrid"></div>
+    </section>
+
+    <section id="work">
+      <div class="head rv"><div><h2>My Work</h2><p class="lead">Photos and screenshots from my projects, internships, and shoots.</p></div></div>
+      <div class="rv"><div class="fl" id="filters" role="group" aria-label="Filter work"></div></div>
+      <div id="workWrap"></div>
+    </section>
+
+    <section id="testimonials" class="alt">
+      <div class="head rv"><div><h2>What People Say</h2></div></div>
+      <div class="tgrid" id="tgrid"></div>
+    </section>
+
+    <section id="hobbies">
+      <div class="head rv"><div><h2>Hobbies</h2><p class="lead">Interests outside of work.</p></div></div>
+      <div class="hgrid" id="hgrid"></div>
+    </section>
+
+    <section id="contact" class="alt">
+      <div class="head rv"><div><h2>Let's Work Together</h2></div></div>
+      <div class="g2">
+        <div class="copy rv">
+          <p class="big">I'm open to opportunities involving web development, IT, photography, multimedia, and creative digital work.</p>
+          <ul class="clist">
+            <li><i data-icon="mail" data-size="18"></i><span id="cEmail"></span><button class="copy-btn" id="copyEmail" type="button" aria-label="Copy email address"><i data-icon="copy" data-size="14"></i>Copy</button></li>
+            <li><i data-icon="phone" data-size="18"></i><span id="cPhone"></span></li>
+            <li><i data-icon="mapPin" data-size="18"></i><span id="cLoc"></span></li>
+          </ul>
+          <div class="row">
+            <a class="btn" data-bind="whatsapp" target="_blank" rel="noreferrer"><i data-icon="message" data-size="16"></i>WhatsApp</a>
+            <a class="btn" data-bind="messenger" target="_blank" rel="noreferrer"><i data-icon="message" data-size="16"></i>Messenger</a>
+            <a class="btn ghost" data-bind="cv" download><i data-icon="download" data-size="16"></i>Download CV</a>
+          </div>
+        </div>
+        <div class="rv" style="transition-delay:120ms">
+          <form class="card cb form" id="cform" novalidate>
+            <label class="sr" for="fName">Name</label>
+            <input id="fName" name="name" placeholder="Name" autocomplete="name" aria-describedby="eName" />
+            <small class="fe" id="eName"></small>
+            <label class="sr" for="fEmail">Email</label>
+            <input id="fEmail" name="email" type="email" placeholder="Email" autocomplete="email" aria-describedby="eEmail" />
+            <small class="fe" id="eEmail"></small>
+            <label class="sr" for="fText">Message</label>
+            <textarea id="fText" name="message" rows="5" placeholder="Message" aria-describedby="eText"></textarea>
+            <small class="fe" id="eText"></small>
+            <input class="honey" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button class="btn full" id="send" type="submit">Send Message <i data-icon="arrowRight" data-size="16"></i></button>
+            <p class="fs" id="fStatus" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer"></footer>
+  </main>
+
+  <!-- Project details -->
+  <div class="md" id="md" hidden role="dialog" aria-modal="true" aria-labelledby="mdTitle">
+    <div class="mdbox">
+      <button class="mdx" id="mdClose" aria-label="Close project details"><i data-icon="x" data-size="20"></i></button>
+      <div class="mdbody" id="mdBody"></div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button aria-label="Close image viewer" id="lbClose"><i data-icon="x" data-size="22"></i></button>
+    <button class="lbn pv" id="lbPrev" aria-label="Previous image"><i data-icon="chevronLeft" data-size="22"></i></button>
+    <button class="lbn nx" id="lbNext" aria-label="Next image"><i data-icon="chevronRight" data-size="22"></i></button>
+    <img id="lbImg" alt="" />
+    <p id="lbCap"></p>
+    <p id="lbCount" class="lbc"></p>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+  <nav class="tabbar" id="tabbar" aria-label="Quick navigation">
+    <a href="#home" data-id="home"><i data-icon="home" data-size="20"></i>Home</a>
+    <a href="#projects" data-id="projects"><i data-icon="code" data-size="20"></i>Projects</a>
+    <a href="#work" data-id="work"><i data-icon="image" data-size="20"></i>Work</a>
+    <a href="#contact" data-id="contact"><i data-icon="mail" data-size="20"></i>Contact</a>
+    <button id="menuTab" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="side"><i data-icon="menu" data-size="20"></i>Menu</button>
+  </nav>
+
+  <a class="fab" id="fab" href="#contact"><i data-icon="mail" data-size="18"></i>Contact</a>
+  <button class="totop" id="toTop" aria-label="Back to top"><i data-icon="arrowUp" data-size="20"></i></button>
+</div>
+
+<script defer src="src/intro.js"></script>
+<script defer src="src/assets.js"></script>
+<script defer src="src/data.js"></script>
+<script defer src="src/bg.js"></script>
+<script defer src="src/mobile.js"></script>
+<script defer src="src/main.js"></script>
+</body>
+</html>
